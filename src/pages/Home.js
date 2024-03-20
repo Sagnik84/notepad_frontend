@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { server } from '../index'
+import React, { useContext, useEffect, useState } from 'react'
+import { Context, server } from '../index'
 import toast from 'react-hot-toast'
 import axios from 'axios'
 import Taskfetch from './Taskfetch'
+import { Navigate } from 'react-router-dom';
+
 
 const Home = () => {
 
   const [title, setTitle] = useState("");
   const [task, setTask] = useState("");
   const [loading, setLoading] = useState(false);
-  //const{isAuthenticated,setIsAuthenticated}=useContext(Context)
+  const{isAuthenticated}=useContext(Context)
   const [alltask, setAlltask] = useState([]);
   const [refresh, setRefresh] = useState(false);
 
@@ -83,7 +85,7 @@ const Home = () => {
     }
   }
 
-
+  if (!isAuthenticated) return <Navigate to={"/login"}></Navigate> 
   return (
     <>
       <div>
