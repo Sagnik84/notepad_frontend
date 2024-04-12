@@ -4,7 +4,7 @@ import App from './App';
 import { createContext } from 'react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export const server = "https://mern-web-ldis.onrender.com"
+export const server = "https://mern-web-ldis.onrender.com"   //https://mern-web-ldis.onrender.com
 
 export const Context = createContext({isAuthenticated:false})
 const AppWrapper = () => {

@@ -30,6 +30,8 @@ const Header = () => {
     setUser({})
     setIsAuthenticated(false)
   })
+
+  
     
   }, [refresh])
   
@@ -55,6 +57,7 @@ const Header = () => {
     }
   
   }
+ 
   return (
     <div className='header'>
       <h2>Todo App.</h2>
@@ -66,7 +69,7 @@ const Header = () => {
         }
         {isAuthenticated ? null : <Link to={"/register"} className='register'>Register</Link>
         }
-      
+     
 
       </div>
     </div>
