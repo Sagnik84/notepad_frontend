@@ -14,7 +14,7 @@ const Register = () => {
 
   const HandleSubmit = async (e) => {
     
-    //e.preventDefault();
+    e.preventDefault();
     try {
       setLoading(true)
      const {data}= await axios.post(`${server}/register`, {

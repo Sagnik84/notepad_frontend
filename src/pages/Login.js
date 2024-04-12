@@ -13,7 +13,7 @@ const Login = () => {
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } = useContext(Context)
 
   const HandleSubmit = async (e) => {
-   // e.preventDefault();
+    e.preventDefault();
     try {
       setLoading(true)
       const { data } = await axios.post(`${server}/login`, {
